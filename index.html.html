@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ever Build Construction — Full-cycle Construction & Property Management</title>
+
+  <!-- Tailwind Play CDN (for quick single-file) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    html, body { font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+    /* subtle container max width for large screens */
+    .container-max { max-width: 1200px; margin-left: auto; margin-right: auto; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+  <!-- Header -->
+  <header class="bg-white shadow-sm sticky top-0 z-40">
+    <div class="container-max px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-gradient-to-br from-amber-600 to-rose-500 rounded-lg flex items-center justify-center text-white font-bold">EB</div>
+        <div>
+          <div class="text-lg font-semibold">Ever Build Construction</div>
+          <div class="text-xs text-slate-500 -mt-0.5">Construction • Property Management • Investment</div>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#services" class="text-slate-700 hover:text-slate-900">Services</a>
+        <a href="#projects" class="text-slate-700 hover:text-slate-900">Projects</a>
+        <a href="#about" class="text-slate-700 hover:text-slate-900">About</a>
+        <a href="#contact" class="text-slate-700 hover:text-slate-900">Contact</a>
+        <button id="bookBtn" class="ml-2 px-4 py-2 bg-amber-600 text-white rounded-md shadow-sm hover:bg-amber-700">Book Consultation</button>
+      </nav>
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden">
+        <button id="mobileToggle" class="p-2 rounded-lg hover:bg-slate-100">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile nav -->
+    <div id="mobileNav" class="md:hidden hidden border-t">
+      <div class="px-6 py-4 space-y-2">
+        <a href="#services" class="block">Services</a>
+        <a href="#projects" class="block">Projects</a>
+        <a href="#about" class="block">About</a>
+        <a href="#contact" class="block">Contact</a>
+        <button id="bookBtnMobile" class="w-full mt-2 px-4 py-2 bg-amber-600 text-white rounded-md">Book Consultation</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main class="container-max px-6 mt-10">
+    <section class="grid md:grid-cols-2 gap-8 items-center">
+      <div class="space-y-6">
+        <p class="inline-flex items-center gap-2 text-sm bg-amber-100 text-amber-800 rounded-full px-3 py-1 w-max">
+          Trusted • Local Bangalore expertise
+        </p>
+
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">
+          Ever Build Construction — Full-cycle construction, property management & investment
+        </h1>
+
+        <p class="text-slate-600 max-w-xl">
+          Ever Build Construction offers comprehensive construction, property management, and investment services with local expertise in Bangalore and a global reach. From construction to post-construction maintenance and rental management, we deliver high-return projects and hassle-free property ownership.
+        </p>
+
+        <div class="flex flex-wrap gap-3">
+          <a href="#contact" class="inline-flex items-center gap-2 px-5 py-3 bg-amber-600 text-white rounded-lg shadow hover:bg-amber-700">
+            Schedule a Consultation
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 opacity-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+          <a href="#projects" class="inline-flex items-center gap-2 px-5 py-3 border border-slate-200 rounded-lg text-slate-700 hover:bg-slate-50">
+            View Projects
+          </a>
+        </div>
+
+        <div class="mt-2 text-sm text-slate-500">
+          Serving Sarjapur, Whitefield, Electronic City and surrounding areas — tailored services if you already own land.
+        </div>
+
+        <!-- Quick stats -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6">
+          <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+            <div class="text-2xl font-bold text-amber-600">150+</div>
+            <div class="text-xs text-slate-500">Completed Projects</div>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+            <div class="text-2xl font-bold text-emerald-600">98%</div>
+            <div class="text-xs text-slate-500">Client Satisfaction</div>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+            <div class="text-2xl font-bold text-slate-700">10 yrs</div>
+            <div class="text-xs text-slate-500">Local Experience</div>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+            <div class="text-2xl font-bold text-rose-500">High ROI</div>
+            <div class="text-xs text-slate-500">Investment Projects</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-first md:order-last">
+        <!-- illustrative card -->
+        <div class="relative bg-gradient-to-br from-slate-800 via-slate-700 to-amber-600 text-white rounded-2xl p-6 shadow-2xl overflow-hidden">
+          <div class="absolute inset-0 opacity-10 mix-blend-multiply"></div>
+          <div class="flex items-start gap-4">
+            <div class="w-20 h-20 bg-white/10 rounded-lg flex items-center justify-center text-2xl font-bold">🏗️</div>
+            <div>
+              <div class="text-sm opacity-90">Featured Case Study</div>
+              <div class="text-xl font-semibold">Government-funded Housing Initiative</div>
+              <p class="mt-3 text-sm opacity-80 max-w-md">
+                Delivered a multi-block residential project on schedule with integrated rental-management plan that continues to generate steady yield.
+              </p>
+              <div class="mt-4 flex gap-2">
+                <a class="px-3 py-2 bg-white/20 rounded-md text-white text-sm hover:bg-white/30">Read brief</a>
+                <a class="px-3 py-2 border border-white/20 rounded-md text-white text-sm hover:bg-white/10">View similar</a>
+              </div>
+            </div>
+          </div>
+          <!-- decorative -->
+          <svg class="absolute right-6 bottom-6 opacity-20" width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="70" cy="70" r="70" fill="white"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="mt-16">
+      <div class="flex items-center justify-between">
+        <div>
+          <h2 class="text-2xl font-bold">Our Services</h2>
+          <p class="text-slate-600 mt-1">Comprehensive offerings across construction, property management, and investment advisory.</p>
+        </div>
+        <div class="hidden sm:block text-sm text-slate-500">Tailored solutions for landowners and investors.</div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 mt-6">
+        <!-- Card 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-sm border">
+          <div class="flex items-center justify-between">
+            <div class="text-amber-600 p-2 bg-amber-50 rounded-md inline-flex">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10c0 1.1.9 2 2 2h3m10-14h-4l-2-2H8a2 2 0 00-2 2v12"/></svg>
+            </div>
+            <div class="text-sm text-slate-500">End-to-end</div>
+          </div>
+          <h3 class="mt-4 font-semibold">Construction & Project Delivery</h3>
+          <p class="text-slate-600 mt-2 text-sm">Design coordination, civil works, MEP, finishing, and onsite project management — delivered on schedule, with strict safety and quality controls.</p>
+          <ul class="mt-3 text-sm space-y-1 text-slate-600">
+            <li>• Residential & Commercial buildings</li>
+            <li>• Site planning & approval support</li>
+            <li>• Quality assurance & HSE</li>
+          </ul>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-sm border">
+          <div class="flex items-center justify-between">
+            <div class="text-emerald-600 p-2 bg-emerald-50 rounded-md inline-flex">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-6a2 2 0 012-2h2a2 2 0 012 2v6M9 7h6"/></svg>
+            </div>
+            <div class="text-sm text-slate-500">Hassle-free</div>
+          </div>
+          <h3 class="mt-4 font-semibold">Property & Rental Management</h3>
+          <p class="text-slate-600 mt-2 text-sm">End-to-end post-construction support: tenant sourcing, rent collections, maintenance, and local compliance — perfect for absentee owners.</p>
+          <ul class="mt-3 text-sm space-y-1 text-slate-600">
+            <li>• Regular maintenance & repairs</li>
+            <li>• Marketing & tenant screening</li>
+            <li>• Accounting & reporting</li>
+          </ul>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-sm border">
+          <div class="flex items-center justify-between">
+            <div class="text-sky-600 p-2 bg-sky-50 rounded-md inline-flex">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 6h18M3 14h6m-6 4h12"/></svg>
+            </div>
+            <div class="text-sm text-slate-500">Investment</div>
+          </div>
+          <h3 class="mt-4 font-semibold">Investment & Advisory</h3>
+          <p class="text-slate-600 mt-2 text-sm">Market-scoped property sourcing, feasibility analysis, and asset-management strategies designed for high-return portfolios across Bangalore hotspots.</p>
+          <ul class="mt-3 text-sm space-y-1 text-slate-600">
+            <li>• Land & built property sourcing</li>
+            <li>• Feasibility & ROI modelling</li>
+            <li>• Projected rental yield reports</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="mt-16">
+      <div class="flex items-center justify-between">
+        <div>
+          <h2 class="text-2xl font-bold">Selected Projects</h2>
+          <p class="text-slate-600 mt-1">Representative developments and investment projects across Sarjapur, Whitefield, and Electronic City.</p>
+        </div>
+        <div class="text-sm text-slate-500">Case studies available on request</div>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+        <!-- Project Card -->
+        <article class="bg-white rounded-lg shadow-sm overflow-hidden border">
+          <div class="h-44 bg-cover bg-center" style="background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://images.unsplash.com/photo-1539992780324-2b0e8ccac9b9?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=1f2353f2c3f2b0b6e6d2b7efb001d6c6');"></div>
+          <div class="p-4">
+            <h3 class="font-semibold">Sarjapur Prime Residences</h3>
+            <p class="text-sm text-slate-600 mt-2">Multi-family residential project with integrated rental management plan — stable monthly yields for investors.</p>
+            <div class="mt-3 flex items-center justify-between text-xs text-slate-500">
+              <span>Location: Sarjapur</span>
+              <span>Completed: 2023</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="bg-white rounded-lg shadow-sm overflow-hidden border">
+          <div class="h-44 bg-cover bg-center" style="background-image: linear-gradient(rgba(0,0,0,0.12), rgba(0,0,0,0.12)), url('https://images.unsplash.com/photo-1505691723518-36a5f01f7d0b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=4f22f4cf1b6b0d466a9b3f8f81049f3f');"></div>
+          <div class="p-4">
+            <h3 class="font-semibold">Whitefield Commercial Complex</h3>
+            <p class="text-sm text-slate-600 mt-2">Mixed-use development with retail and office spaces targeted for high occupancy and long-term leases.</p>
+            <div class="mt-3 flex items-center justify-between text-xs text-slate-500">
+              <span>Location: Whitefield</span>
+              <span>Completed: 2022</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="bg-white rounded-lg shadow-sm overflow-hidden border">
+          <div class="h-44 bg-cover bg-center" style="background-image: linear-gradient(rgba(0,0,0,0.12), rgba(0,0,0,0.12)), url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=8c8b1a6acb2b3e4b04b8c6b6f0f6b6bb');"></div>
+          <div class="p-4">
+            <h3 class="font-semibold">Electronic City Investment Blocks</h3>
+            <p class="text-sm text-slate-600 mt-2">Strategic investor-focused residential blocks aimed at strong rental demand from tech professionals.</p>
+            <div class="mt-3 flex items-center justify-between text-xs text-slate-500">
+              <span>Location: Electronic City</span>
+              <span>Completed: 2024</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="mt-16 bg-white p-6 rounded-lg shadow-sm border">
+      <div class="md:flex md:items-center md:gap-8">
+        <div class="md:w-1/3">
+          <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=082c5d165f5a8f1f3f4a7b0c9f9a8b2c" alt="Team at work" class="rounded-lg object-cover w-full h-56">
+        </div>
+        <div class="md:flex-1 mt-4 md:mt-0">
+          <h3 class="text-xl font-bold">About Ever Build</h3>
+          <p class="text-slate-600 mt-2">
+            Ever Build Construction is a trusted name in comprehensive construction, property management, and investment services. With local expertise in Bangalore and a global reach, we provide full-cycle solutions — from construction to post-construction maintenance and rental management.
+          </p>
+          <p class="text-slate-600 mt-2">
+            Our proven track record includes successful high-return projects such as government-funded initiatives and residential/commercial properties that generate consistent rental income. If you already own land, we offer tailored services to meet all your construction and property management needs.
+          </p>
+
+          <div class="mt-4 flex gap-3">
+            <a href="#contact" class="px-4 py-2 bg-amber-600 text-white rounded-md">Get a Proposal</a>
+            <a href="#projects" class="px-4 py-2 border rounded-md text-slate-700">See Case Studies</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="mt-16">
+      <div class="grid md:grid-cols-2 gap-8 items-start">
+        <div class="bg-white p-6 rounded-lg shadow-sm border">
+          <h3 class="text-xl font-bold">Get in touch</h3>
+          <p class="text-slate-600 mt-2">Tell us about your project or request a consultation. We'll respond within 48 hours.</p>
+
+          <form id="contactForm" class="mt-4 space-y-4">
+            <div>
+              <label class="block text-sm text-slate-700">Full name</label>
+              <input required name="name" class="mt-1 w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-200" placeholder="Your name">
+            </div>
+
+            <div>
+              <label class="block text-sm text-slate-700">Email</label>
+              <input required type="email" name="email" class="mt-1 w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-200" placeholder="you@example.com">
+            </div>
+
+            <div>
+              <label class="block text-sm text-slate-700">Phone (optional)</label>
+              <input name="phone" class="mt-1 w-full border rounded-md px-3 py-2" placeholder="+91 98765 43210">
+            </div>
+
+            <div>
+              <label class="block text-sm text-slate-700">Message / Project brief</label>
+              <textarea required name="message" rows="4" class="mt-1 w-full border rounded-md px-3 py-2" placeholder="Tell us about your land, timeline, and goals..."></textarea>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <button type="submit" class="px-4 py-2 bg-amber-600 text-white rounded-md">Send Message</button>
+              <button type="button" id="clearBtn" class="px-4 py-2 border rounded-md text-slate-700">Clear</button>
+            </div>
+
+            <p id="formNotice" class="text-xs text-slate-500 mt-2">This sample form logs data to the browser console (demo). Integrate with your backend or CRM for production.</p>
+          </form>
+        </div>
+
+        <div>
+          <div class="bg-white p-6 rounded-lg shadow-sm border">
+            <h4 class="font-semibold">Contact Details</h4>
+            <p class="text-slate-600 mt-2 text-sm">
+              Ever Build Construction<br>
+              Bangalore, India<br>
+              Email: <a href="mailto:hello@everbuild.in" class="text-amber-600">hello@everbuild.in</a><br>
+              Phone: <a href="tel:+919876543210" class="text-amber-600">+91 98765 43210</a>
+            </p>
+
+            <div class="mt-4">
+              <h5 class="text-sm font-medium">Office Hours</h5>
+              <p class="text-slate-600 text-sm mt-1">Mon — Sat: 9:00 AM — 6:00 PM</p>
+            </div>
+
+            <div class="mt-4">
+              <h5 class="text-sm font-medium">Quick Links</h5>
+              <ul class="mt-2 text-sm space-y-1 text-amber-600">
+                <li><a href="#projects">Project portfolio</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">Company profile</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-6 p-6 rounded-lg border bg-gradient-to-r from-amber-50 to-white">
+            <h5 class="font-semibold">Investor? We can help</h5>
+            <p class="text-slate-600 mt-2 text-sm">Looking for prime properties in Sarjapur, Whitefield, or Electronic City? Request an investment brief and projected yields.</p>
+            <button id="requestBrief" class="mt-3 px-4 py-2 bg-sky-600 text-white rounded-md">Request Investment Brief</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-16 border-t pt-8 pb-12">
+      <div class="container-max px-6 grid md:grid-cols-3 gap-6">
+        <div>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-amber-600 text-white rounded-lg flex items-center justify-center font-bold">EB</div>
+            <div>
+              <div class="font-semibold">Ever Build Construction</div>
+              <div class="text-sm text-slate-500">Full-cycle construction & property solutions</div>
+            </div>
+          </div>
+
+          <p class="text-sm text-slate-600 mt-4">Providing dependable construction, property management, and investment services across Bangalore. Trusted by investors and owners alike.</p>
+        </div>
+
+        <div class="text-sm">
+          <div class="font-medium">Services</div>
+          <ul class="mt-3 space-y-2 text-slate-600">
+            <li>Construction & delivery</li>
+            <li>Property management</li>
+            <li>Investment advisory</li>
+          </ul>
+        </div>
+
+        <div class="text-sm">
+          <div class="font-medium">Follow</div>
+          <div class="mt-3 flex gap-3">
+            <a class="text-slate-600 hover:text-slate-900">LinkedIn</a>
+            <a class="text-slate-600 hover:text-slate-900">Instagram</a>
+            <a class="text-slate-600 hover:text-slate-900">Twitter</a>
+          </div>
+          <div class="mt-6 text-xs text-slate-500">© <span id="year"></span> Ever Build Construction. All rights reserved.</div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Modal (Consultation) -->
+  <div id="modal" class="fixed inset-0 bg-black/40 hidden items-center justify-center z-50">
+    <div class="bg-white rounded-lg shadow-xl w-full max-w-lg p-6">
+      <div class="flex items-start justify-between">
+        <div>
+          <h3 class="text-lg font-semibold">Book a Consultation</h3>
+          <p class="text-sm text-slate-600">Share a few details and our team will reach out to schedule a visit or call.</p>
+        </div>
+        <button id="closeModal" class="text-slate-500 hover:text-slate-700">✕</button>
+      </div>
+
+      <form id="modalForm" class="mt-4 space-y-3">
+        <div>
+          <label class="block text-sm text-slate-700">Full name</label>
+          <input name="mname" required class="mt-1 w-full border rounded-md px-3 py-2" placeholder="Your name">
+        </div>
+        <div>
+          <label class="block text-sm text-slate-700">Email</label>
+          <input name="memail" type="email" required class="mt-1 w-full border rounded-md px-3 py-2" placeholder="you@example.com">
+        </div>
+        <div>
+          <label class="block text-sm text-slate-700">Preferred location</label>
+          <select name="mlocation" class="mt-1 w-full border rounded-md px-3 py-2">
+            <option>Sarjapur</option>
+            <option>Whitefield</option>
+            <option>Electronic City</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="flex items-center gap-3">
+          <button type="submit" class="px-4 py-2 bg-amber-600 text-white rounded-md">Request</button>
+          <button type="button" id="cancelModal" class="px-4 py-2 border rounded-md">Cancel</button>
+        </div>
+        <p class="text-xs text-slate-500">Note: This demo modal logs data to the console. Connect to backend for production.</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Fill year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile toggle
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    mobileToggle?.addEventListener('click', () => {
+      mobileNav.classList.toggle('hidden');
+    });
+
+    // Modal controls
+    const modal = document.getElementById('modal');
+    const bookBtn = document.getElementById('bookBtn');
+    const bookBtnMobile = document.getElementById('bookBtnMobile');
+    const requestBrief = document.getElementById('requestBrief');
+    const closeModal = document.getElementById('closeModal');
+    const cancelModal = document.getElementById('cancelModal');
+
+    function openModal() { modal.classList.remove('hidden'); modal.classList.add('flex'); }
+    function closeModalFn() { modal.classList.add('hidden'); modal.classList.remove('flex'); }
+
+    bookBtn?.addEventListener('click', openModal);
+    bookBtnMobile?.addEventListener('click', openModal);
+    requestBrief?.addEventListener('click', openModal);
+    closeModal?.addEventListener('click', closeModalFn);
+    cancelModal?.addEventListener('click', closeModalFn);
+
+    // Modal submit logs to console (demo)
+    document.getElementById('modalForm')?.addEventListener('submit', function(e){
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(e.target).entries());
+      console.log('[Modal Consultation Request]', data);
+      alert('Consultation request logged to console (demo). We will contact you soon.');
+      e.target.reset();
+      closeModalFn();
+    });
+
+    // Contact form (demo) - logs to console and shows small confirmation
+    const contactForm = document.getElementById('contactForm');
+    const formNotice = document.getElementById('formNotice');
+
+    contactForm?.addEventListener('submit', function(e){
+      e.preventDefault();
+      const formEl = e.target;
+      const data = Object.fromEntries(new FormData(formEl).entries());
+      // Basic validation done by required attributes
+      console.log('[Contact Form Submission]', data);
+      formNotice.textContent = 'Message sent (demo). Data logged to console. Connect to backend/CRM for live submissions.';
+      formEl.reset();
+    });
+
+    // Clear button
+    document.getElementById('clearBtn')?.addEventListener('click', function(){
+      contactForm.reset();
+      formNotice.textContent = 'Form cleared.';
+    });
+
+    // Small UX: close modal on background click
+    modal?.addEventListener('click', (e) => {
+      if (e.target === modal) closeModalFn();
+    });
+  </script>
+</body>
+</html>
